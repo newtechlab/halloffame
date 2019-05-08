@@ -1,0 +1,86 @@
+<html ng-app="hof">
+
+<head>
+    <title>{{person}}</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="master.css">
+    <style>
+        @import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300');
+
+        body {
+            background-image: url('img/gracie.jpg');
+            /* background-size: 100%; */
+        }
+    </style>
+    <script src="node_modules/angular/angular.min.js"></script>
+</head>
+
+<body ng-controller="mainCtrl">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">DNB - Hall of Fame</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" ng-class="{'active': isActive(lady)}" ng-repeat="lady in ladies">
+                        <a class="nav-link" href="/{{lady.toLowerCase().replace(' ','')}}/">{{lady}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full Page Image Header with Vertically Centered Content-->
+    <header class="masthead">
+        <div class="container h-10">
+
+        </div>
+    </header>
+
+    <div class="py-5">
+        <div class="container bg-light">
+            <div id="container">&nbsp;</div>
+            <div class="container text-right">
+                <h1>{{person}}</h1>
+            </div>
+            <!-- Page Content -->
+            <div class="container">
+                <h2 class="font-weight-light">Who {{tense}} she?</h2>
+                <p ng-bind-html="extract"></p>
+            </div>
+            <div class="container">
+                <h2 class="font-weight-light">What did she do?</h2>
+                <p>
+                    <ul>
+                        <li ng-repeat="item in list">{{item}}</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="container">
+                <h2 class="font-weight-light">Why is she on the list?</h2>
+                <p>{{why}}</p>
+            </div>
+            <div class="container">
+                <h2 id="font-weight-light">Learn more!</h2>
+                <p>
+                    <div ng-repeat="video in media" class="video">
+                        <iframe width="100%" height="100%" ng-src="{{video.url| trusted}}" frameborder="0" allowfullscreen=></iframe>
+                    </div>
+                </p>
+            </div>
+            <div id="container"><p>&nbsp;</p></div>
+        </div>
+    </div>
+    
+    </section>
+</body>
+<script src="app.js"></script>
+
+</html>

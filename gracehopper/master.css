@@ -1,0 +1,27 @@
+.masthead {
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:200,300');
+
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  background-attachment: fixed;
+  font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
+}
+.bg-light{
+background: rgba(255,255,255,0.85) !important;
+}
+.video{
+width: 50%;
+height:300px;
+display: inline-block;
+padding:2px;
+}
