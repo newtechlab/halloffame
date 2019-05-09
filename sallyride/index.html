@@ -22,7 +22,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="/">DNB - Hall of Fame</a>
+            <a class="navbar-brand" href="../">DNB - Hall of Fame</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item" ng-class="{'active': isActive(lady)}" ng-repeat="lady in ladies">
-                        <a class="nav-link" href="/{{lady.toLowerCase().replace(' ','')}}/">{{lady}}
+                        <a class="nav-link" href="../{{lady.toLowerCase().replace(' ','')}}/">{{lady}}
                         </a>
                     </li>
                 </ul>
